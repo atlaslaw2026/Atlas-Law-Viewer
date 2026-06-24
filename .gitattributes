@@ -1,0 +1,10 @@
+# Generated search interfaces and bundled public-record snapshots.
+# Keep them reviewable while excluding them from GitHub language statistics.
+case_extractor_data.json linguist-generated=true
+case_extractor_index.html linguist-generated=true
+central_opinions_data.json linguist-generated=true
+central_opinions_index.html linguist-generated=true
+opinions_data.json linguist-generated=true
+opinions_index.html linguist-generated=true
+supreme_opinions_data.json linguist-generated=true
+supreme_opinions_index.html linguist-generated=true
