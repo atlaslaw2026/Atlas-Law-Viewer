@@ -84,7 +84,11 @@ def normalize_statute_citation(raw_value: str) -> list[str]:
     value = re.sub(r"U\.?\s*S\.?\s*C\.?\.?", "U.S.C.", value, flags=re.IGNORECASE)
     value = re.sub(r"\s+", " ", value).strip(" ,.;:")
 
-    m = re.match(r"^(?P<title>\d+)\s+U\.S\.C\.\s*(?P<marker>§{1,2})?\s*(?P<rest>.+)$", value, flags=re.IGNORECASE)
+    m = re.match(
+        r"^(?P<title>\d+)\s+U\.S\.C\.\s*(?P<marker>§{1,2})?\s*(?P<rest>.+)$",
+        value,
+        flags=re.IGNORECASE,
+    )
     if not m:
         return [value]
 
@@ -99,7 +103,11 @@ def normalize_statute_citation(raw_value: str) -> list[str]:
         chunk = normalize_ws(part).strip(" ,.;:")
         if not chunk:
             continue
-        token_match = re.match(r"^([0-9A-Za-z._\-]+(?:\([0-9A-Za-z]+\))*)(?:\s+et\s+seq\.)?", chunk, flags=re.IGNORECASE)
+        token_match = re.match(
+            r"^([0-9A-Za-z._\-]+(?:\([0-9A-Za-z]+\))*)(?:\s+et\s+seq\.)?",
+            chunk,
+            flags=re.IGNORECASE,
+        )
         if not token_match:
             continue
         section = token_match.group(1)
@@ -131,9 +139,18 @@ def clean_case_citations(items: list[str], title: str | None = None) -> list[str
             continue
 
         value = re.sub(r"^[^A-Z]*(?=[A-Z])", "", value)
-        value = re.sub(r"^(?:See(?:\s+also)?|Cf\.?|But\s+see|Compare|Accord|E\.g\.,?|quoting)\s+", "", value, flags=re.IGNORECASE)
+        value = re.sub(
+            r"^(?:See(?:\s+also)?|Cf\.?|But\s+see|Compare|Accord|E\.g\.,?|quoting)\s+",
+            "",
+            value,
+            flags=re.IGNORECASE,
+        )
 
-        signal_split = re.split(r"\b(?:See(?:\s+also)?|Cf\.?|But\s+see|Compare|Accord|E\.g\.,?|quoting)\b", value, flags=re.IGNORECASE)
+        signal_split = re.split(
+            r"\b(?:See(?:\s+also)?|Cf\.?|But\s+see|Compare|Accord|E\.g\.,?|quoting)\b",
+            value,
+            flags=re.IGNORECASE,
+        )
         if len(signal_split) > 1:
             value = normalize_ws(signal_split[-1]).strip(" ,;:")
 
@@ -321,7 +338,11 @@ def parse_rows(page_html: str) -> list[dict]:
         name_cell = match.group("name_cell")
         citation_cell = match.group("citation_cell")
 
-        link_match = re.search(r"<a[^>]*href=['\"](?P<href>[^'\"]+)['\"][^>]*>(?P<title>.*?)</a>", name_cell, flags=re.IGNORECASE | re.DOTALL)
+        link_match = re.search(
+            r"<a[^>]*href=['\"](?P<href>[^'\"]+)['\"][^>]*>(?P<title>.*?)</a>",
+            name_cell,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
         if not link_match:
             continue
 
@@ -334,7 +355,9 @@ def parse_rows(page_html: str) -> list[dict]:
         seen_pdf.add(pdf_url)
 
         name = normalize_ws(re.sub(r"<[^>]+>", " ", html.unescape(link_match.group("title"))))
-        title_attr_match = re.search(r"title=['\"]([^'\"]+)['\"]", link_match.group(0), flags=re.IGNORECASE | re.DOTALL)
+        title_attr_match = re.search(
+            r"title=['\"]([^'\"]+)['\"]", link_match.group(0), flags=re.IGNORECASE | re.DOTALL
+        )
         summary = normalize_ws(html.unescape(title_attr_match.group(1) if title_attr_match else ""))
 
         citation = normalize_ws(re.sub(r"<[^>]+>", " ", html.unescape(citation_cell)))
@@ -361,7 +384,12 @@ def parse_rows(page_html: str) -> list[dict]:
                 "subjects": ["Supreme Court", "Slip Opinions"],
                 "published": True,
                 "text": summary,
-                "citations": {"cases": [citation] if citation else [], "statutes": [], "rules": [], "regulations": []},
+                "citations": {
+                    "cases": [citation] if citation else [],
+                    "statutes": [],
+                    "rules": [],
+                    "regulations": [],
+                },
                 "authorities": {
                     "cases": [name] + ([citation] if citation else []),
                     "statutes": [],
@@ -373,7 +401,9 @@ def parse_rows(page_html: str) -> list[dict]:
             }
         )
 
-    opinions.sort(key=lambda op: ((op.get("issue_date") or ""), -(op.get("rank") or 0)), reverse=True)
+    opinions.sort(
+        key=lambda op: ((op.get("issue_date") or ""), -(op.get("rank") or 0)), reverse=True
+    )
     for idx, op in enumerate(opinions, start=1):
         op["id"] = idx
     return opinions
@@ -406,7 +436,8 @@ def create_searchable_html(count: int):
     with open(JSON_FILE, "r", encoding="utf-8") as jf:
         embedded_json = jf.read().replace("</script", "<\\/script")
 
-    html_doc = """
+    html_doc = (
+        """
 <!DOCTYPE html>
 <html>
 <head>
@@ -508,7 +539,9 @@ def create_searchable_html(count: int):
             <a class="view-link" href="/opinions_index.html">Ninth Circuit</a>
             <a class="view-link" href="/central_opinions_index.html">Central District (C.D. Cal.)</a>
         </div>
-        <div class="stats"><span id="total-count">""" + str(count) + """</span> opinions | Searchable</div>
+        <div class="stats"><span id="total-count">"""
+        + str(count)
+        + """</span> opinions | Searchable</div>
         <div class="update-controls">
             <button id="update-all-btn" class="update-btn" onclick="runAtlasRefresh()">Update All Courts</button>
             <span id="update-status" class="update-status">Idle</span>
@@ -819,6 +852,7 @@ def create_searchable_html(count: int):
 </body>
 </html>
 """
+    )
 
     html_doc = html_doc.replace("__EMBEDDED_OPINIONS__", embedded_json)
     with open(HTML_FILE, "w", encoding="utf-8") as f:

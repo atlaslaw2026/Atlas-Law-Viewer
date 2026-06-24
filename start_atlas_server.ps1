@@ -43,7 +43,7 @@ if (-not $pythonExe) {
     throw "No usable Python executable found for Atlas server startup."
 }
 
-$env:HOST = '0.0.0.0'
+$env:HOST = '127.0.0.1'
 $env:PORT = '8080'
 
 $connections = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue
@@ -62,14 +62,4 @@ if ($connections) {
 }
 
 Write-Host "Starting Atlas server on http://127.0.0.1:8080 ..."
-try {
-    $lanIp = Get-NetIPAddress -AddressFamily IPv4 |
-        Where-Object { $_.IPAddress -notlike '169.254.*' -and $_.IPAddress -ne '127.0.0.1' -and $_.PrefixOrigin -ne 'WellKnown' } |
-        Select-Object -First 1 -ExpandProperty IPAddress
-    if ($lanIp) {
-        Write-Host "Phone URL (same Wi-Fi): http://$lanIp:8080/"
-    }
-}
-catch {
-}
 & $pythonExe (Join-Path $baseDir 'atlas_law_server.py')

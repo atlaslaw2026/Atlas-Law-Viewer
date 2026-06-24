@@ -43,3 +43,4 @@ Atlas_GitHub_Portfolio_deploy*.zip
 Atlas_GitHub_Portfolio_folder_exact*.zip
 installer/build/
 installer/dist/
+dist_installer/

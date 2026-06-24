@@ -1,11 +1,12 @@
 """
 Atlas Law PDF Viewer with Search — Access and search stored opinions
 """
-import sqlite3
-import os
+
 import json
-import webbrowser
+import os
 import re
+import sqlite3
+import webbrowser
 from urllib.parse import quote
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "atlas_law.db")
@@ -43,14 +44,12 @@ def _load_authorities_map(conn: sqlite3.Connection) -> dict[int, dict]:
         return mapped
 
     cur = conn.cursor()
-    cur.execute(
-        """
+    cur.execute("""
         SELECT opinion_id, authority_type, citation
         FROM authorities
         WHERE citation IS NOT NULL AND citation != ''
         ORDER BY opinion_id, id
-        """
-    )
+        """)
 
     for opinion_id, authority_type, citation in cur.fetchall():
         if opinion_id not in mapped:
@@ -116,7 +115,7 @@ def _extract_named_case_citations(text: str, title: str | None) -> list[str]:
             citation = re.sub(r"\s+", " ", match.group(1)).strip(" ,.;:")
 
             if not re.search(r"\([^)]*\b(?:19|20)\d{2}\b[^)]*\)", citation):
-                tail = sample[match.end():match.end() + 60]
+                tail = sample[match.end() : match.end() + 60]
                 year_paren = re.search(r"\(([^)]*\b(?:19|20)\d{2}\b[^)]*)\)", tail)
                 if year_paren:
                     year_text = re.sub(r"\s+", " ", year_paren.group(1)).strip()
@@ -151,7 +150,9 @@ def _looks_like_good_case_citation(value: str, title: str | None = None) -> bool
     has_in_re = bool(re.search(r"^\s*in\s+re\b", text, flags=re.IGNORECASE))
     has_reporter = bool(re.search(r"\b\d+\s+[A-Z][A-Za-z.\d ]{0,20}\s+\d+\b", text))
     has_year_paren = bool(re.search(r"\([^)]*\b(?:19|20)\d{2}\b[^)]*\)", text))
-    has_court_paren = bool(re.search(r"\([^)]*\b(?:cir\.|ct\.|app\.|bap|u\.s\.)[^)]*\)", text, flags=re.IGNORECASE))
+    has_court_paren = bool(
+        re.search(r"\([^)]*\b(?:cir\.|ct\.|app\.|bap|u\.s\.)[^)]*\)", text, flags=re.IGNORECASE)
+    )
 
     if has_reporter and has_v:
         return True
@@ -162,7 +163,13 @@ def _looks_like_good_case_citation(value: str, title: str | None = None) -> bool
     if has_reporter and (has_year_paren or has_court_paren or has_v):
         return True
 
-    if has_reporter and len(text) <= 140 and not any(t in text.lower() for t in ["petitioner", "respondent", "plaintiff", "defendant"]):
+    if (
+        has_reporter
+        and len(text) <= 140
+        and not any(
+            t in text.lower() for t in ["petitioner", "respondent", "plaintiff", "defendant"]
+        )
+    ):
         return True
 
     blocked_tokens = [
@@ -236,8 +243,8 @@ def _derive_issue_date(opinion_date: str | None, url: str | None, pdf_url: str |
 
 def _normalize_legal_text(value: str | None) -> str:
     text = str(value or "")
-    return (text
-        .replace("Â§", "§")
+    return (
+        text.replace("Â§", "§")
         .replace("Ã‚Â§", "§")
         .replace("â€”", "—")
         .replace("â€“", "–")
@@ -329,19 +336,28 @@ def export_opinions_to_json():
     cur = conn.cursor()
     authorities_map = _load_authorities_map(conn)
 
-    cur.execute(
-        """
+    cur.execute("""
         SELECT id, title, date, published, url, pdf_url, local_pdf_path, subjects, text, citations
         FROM opinions
         ORDER BY rowid DESC
-        """
-    )
-    
+        """)
+
     opinions = []
     total_rows = 0
     skipped_rows = 0
 
-    for opinion_id, title, opinion_date, published, url, pdf_url, local_pdf_path, subjects, text, citations in cur.fetchall():
+    for (
+        opinion_id,
+        title,
+        opinion_date,
+        published,
+        url,
+        pdf_url,
+        local_pdf_path,
+        subjects,
+        text,
+        citations,
+    ) in cur.fetchall():
         total_rows += 1
         # Allow backfilled CourtListener records even if they lack URL/PDF data
         is_backfilled = subjects and "courtlistener-backfill" in (subjects or "")
@@ -354,7 +370,9 @@ def export_opinions_to_json():
             "cases": [_normalize_legal_text(x) for x in parsed_citations.get("cases", [])],
             "statutes": [_normalize_legal_text(x) for x in parsed_citations.get("statutes", [])],
             "rules": [_normalize_legal_text(x) for x in parsed_citations.get("rules", [])],
-            "regulations": [_normalize_legal_text(x) for x in parsed_citations.get("regulations", [])],
+            "regulations": [
+                _normalize_legal_text(x) for x in parsed_citations.get("regulations", [])
+            ],
         }
         extracted = authorities_map.get(opinion_id, {})
         named_cases = _extract_named_case_citations(text or "", title)
@@ -377,40 +395,52 @@ def export_opinions_to_json():
 
         case_authorities = _clean_case_authorities(case_authorities, normalized_title)
 
-        opinions.append({
-            "id": opinion_id,
-            "title": normalized_title,
-            "date": opinion_date,
-            "issue_date": issue_date,
-            "published": bool(published),
-            "url": url,
-            "pdf_url": pdf_url,
-            "local_pdf_path": local_pdf_path or "",
-            "subjects": subjects.split(";") if subjects else [],
-            "text": text or "",
-            "citations": parsed_citations,
-            "authorities": {
-                "cases": case_authorities,
-                "statutes": [_normalize_legal_text(x) for x in extracted.get("statute", [])],
-                "rules": [_normalize_legal_text(x) for x in extracted.get("rule", [])],
-                "regulations": [_normalize_legal_text(x) for x in extracted.get("regulation", [])],
-                "constitutional": [_normalize_legal_text(x) for x in extracted.get("constitutional", [])],
-                "other": [_normalize_legal_text(x) for x in extracted.get("other", [])],
-            },
-        })
+        opinions.append(
+            {
+                "id": opinion_id,
+                "title": normalized_title,
+                "date": opinion_date,
+                "issue_date": issue_date,
+                "published": bool(published),
+                "url": url,
+                "pdf_url": pdf_url,
+                "local_pdf_path": local_pdf_path or "",
+                "subjects": subjects.split(";") if subjects else [],
+                "text": text or "",
+                "citations": parsed_citations,
+                "authorities": {
+                    "cases": case_authorities,
+                    "statutes": [_normalize_legal_text(x) for x in extracted.get("statute", [])],
+                    "rules": [_normalize_legal_text(x) for x in extracted.get("rule", [])],
+                    "regulations": [
+                        _normalize_legal_text(x) for x in extracted.get("regulation", [])
+                    ],
+                    "constitutional": [
+                        _normalize_legal_text(x) for x in extracted.get("constitutional", [])
+                    ],
+                    "other": [_normalize_legal_text(x) for x in extracted.get("other", [])],
+                },
+            }
+        )
 
     opinions.sort(
-        key=lambda op: ((op.get("issue_date") or ""), 1 if op.get("published") else 0, op.get("id") or 0),
+        key=lambda op: (
+            (op.get("issue_date") or ""),
+            1 if op.get("published") else 0,
+            op.get("id") or 0,
+        ),
         reverse=True,
     )
     _attach_case_links(opinions)
-    
+
     conn.close()
-    
+
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(opinions, f, ensure_ascii=False, indent=2)
-    
-    print(f"OK Exported {len(opinions)} judicial opinions to JSON (skipped {skipped_rows} of {total_rows})")
+
+    print(
+        f"OK Exported {len(opinions)} judicial opinions to JSON (skipped {skipped_rows} of {total_rows})"
+    )
     return len(opinions)
 
 
@@ -419,7 +449,8 @@ def create_searchable_html(count):
     with open(JSON_FILE, "r", encoding="utf-8") as jf:
         embedded_json = jf.read().replace("</script", "<\\/script")
 
-    html = """
+    html = (
+        """
 <!DOCTYPE html>
 <html>
 <head>
@@ -428,7 +459,7 @@ def create_searchable_html(count):
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: "Times New Roman", Times, serif; 
+            font-family: "Times New Roman", Times, serif;
             background: #f5f7fa;
             min-height: 100vh;
             padding: 20px;
@@ -442,15 +473,15 @@ def create_searchable_html(count):
             padding: 30px;
             box-shadow: 0 2px 8px rgba(0,61,165,0.1);
         }
-        h1 { 
-            color: #003da5; 
+        h1 {
+            color: #003da5;
             margin-bottom: 5px;
             text-align: center;
             font-size: 28px;
         }
-        .stats { 
-            text-align: center; 
-            color: #0066cc; 
+        .stats {
+            text-align: center;
+            color: #0066cc;
             margin-bottom: 25px;
             font-size: 16px;
         }
@@ -844,14 +875,16 @@ def create_searchable_html(count):
             <a class="view-link" href="/central_opinions_index.html">Central District (C.D. Cal.)</a>
         </div>
         <div class="stats">
-            <span id="total-count">""" + str(count) + """</span> opinions | Searchable
+            <span id="total-count">"""
+        + str(count)
+        + """</span> opinions | Searchable
         </div>
         <div class="update-controls">
             <button id="update-all-btn" class="update-btn" onclick="runAtlasRefresh()">Update All Courts</button>
             <span id="update-status" class="update-status">Idle</span>
             <button id="theme-toggle-btn" class="theme-btn" onclick="toggleNightVision()">Night Vision: Off</button>
         </div>
-        
+
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Search by keyword, case name, judge..." autofocus>
             <select id="subject-filter">
@@ -864,8 +897,8 @@ def create_searchable_html(count):
             <button onclick="search()">Search</button>
             <button onclick="clearSearch()">Clear</button>
         </div>
-        
-        
+
+
         <div class="results-count" id="results-count"></div>
 
         <div class="layout">
@@ -993,7 +1026,7 @@ def create_searchable_html(count):
                     if (text) subjects.add(text);
                 });
             });
-            
+
             const select = document.getElementById('subject-filter');
             while (select.options.length > 1) {
                 select.remove(1);
@@ -1068,14 +1101,14 @@ def create_searchable_html(count):
                 const safeTitle = (op.title || '').toLowerCase();
                 const safeText = (op.text || '').toLowerCase();
                 const safeSubjects = Array.isArray(op.subjects) ? op.subjects : [];
-                const matchesQuery = !query || 
+                const matchesQuery = !query ||
                     safeTitle.includes(query) ||
                     safeText.includes(query);
-                
+
                 const matchesSubject = !subject || safeSubjects.includes(subject);
                 const matchesPublication = !publication ||
                     (publication === 'published' ? op.published : !op.published);
-                
+
                 return matchesQuery && matchesSubject && matchesPublication;
             });
 
@@ -1105,7 +1138,7 @@ def create_searchable_html(count):
             const html = filteredOpinions.map(op => {
                 let title = op.title || 'Untitled Opinion';
                 let text_preview = cleanPreview(op.text).substring(0, 160);
-                
+
                 if (query) {
                     title = highlightText(title, query);
                     text_preview = highlightText(text_preview, query);
@@ -1501,12 +1534,13 @@ def create_searchable_html(count):
 </body>
 </html>
 """
+    )
 
     html = html.replace("__EMBEDDED_OPINIONS__", embedded_json)
-    
+
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html)
-    
+
     print(f"OK Created: {HTML_FILE}")
 
 
@@ -1517,5 +1551,5 @@ if __name__ == "__main__":
     if os.getenv("ATLAS_NO_BROWSER", "0") == "1":
         print("\nOK Complete! Browser launch skipped (ATLAS_NO_BROWSER=1)")
     else:
-        print(f"\nOK Complete! Opening http://127.0.0.1:8080/")
+        print("\nOK Complete! Opening http://127.0.0.1:8080/")
         webbrowser.open("http://127.0.0.1:8080/")

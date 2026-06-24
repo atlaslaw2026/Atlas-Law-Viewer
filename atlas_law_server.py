@@ -1,20 +1,20 @@
 """Atlas Law Server — serves only Atlas Law search files (not your drive)."""
 
-import http.server
-import os
-from pathlib import Path
-import re
-import socketserver
 import html
+import http.server
 import json
-import threading
+import logging
+import os
+import re
+import shutil
+import socketserver
 import subprocess
 import sys
-from datetime import datetime
+import threading
 import urllib.parse
 import urllib.request
-import logging
-import shutil
+from datetime import datetime
+from pathlib import Path
 
 try:
     import cloudscraper
@@ -89,7 +89,11 @@ def is_allowed_pdf_target(target: urllib.parse.ParseResult) -> bool:
     host = (target.netloc or "").lower()
     path = target.path or ""
     allowed_prefixes = PDF_PROXY_RULES.get(host)
-    if target.scheme not in {"http", "https"} or allowed_prefixes is None and host not in PDF_PROXY_RULES:
+    if (
+        target.scheme not in {"http", "https"}
+        or allowed_prefixes is None
+        and host not in PDF_PROXY_RULES
+    ):
         return False
 
     lower_path = path.lower()
@@ -148,7 +152,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             refresh_summary = None
             try:
                 if REFRESH_SUMMARY_FILE.exists():
-                    refresh_summary = json.loads(REFRESH_SUMMARY_FILE.read_text(encoding="utf-8-sig"))
+                    refresh_summary = json.loads(
+                        REFRESH_SUMMARY_FILE.read_text(encoding="utf-8-sig")
+                    )
             except Exception:
                 refresh_summary = None
 
@@ -205,7 +211,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                     creationflags=creation_flags,
                 )
             except Exception as exc:
-                return self._send_json(500, {"ok": False, "message": f"Failed to start refresh: {exc}"})
+                return self._send_json(
+                    500, {"ok": False, "message": f"Failed to start refresh: {exc}"}
+                )
 
             now = datetime.now().isoformat(timespec="seconds")
             REFRESH_STARTED_AT = now
@@ -259,7 +267,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "casetext.com",
             "scholar.google.com",
         )
-        if (hint.startswith("http://") or hint.startswith("https://")) and not self._is_courtlistener_url(hint):
+        if (
+            hint.startswith("http://") or hint.startswith("https://")
+        ) and not self._is_courtlistener_url(hint):
             return hint
 
         web_query = f'"{citation}" (site:law.justia.com OR site:openjurist.org OR site:casetext.com OR site:scholar.google.com OR site:courtlistener.com)'
@@ -285,7 +295,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         except Exception as exc:
             LOGGER.warning("Citation resolver search failed for '%s': %s", citation, exc)
 
-        if (hint.startswith("http://") or hint.startswith("https://")) and not self._is_courtlistener_url(hint):
+        if (
+            hint.startswith("http://") or hint.startswith("https://")
+        ) and not self._is_courtlistener_url(hint):
             return hint
 
         fallback_query = citation if citation else "federal case"
@@ -470,7 +482,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             # Cross-machine installs may carry absolute paths from another device.
             # Treat a valid PDF basename as cache-miss (404) instead of forbidden (403).
             fallback_name = Path(raw_path).name
-            if fallback_name and fallback_name not in {".", ".."} and fallback_name.lower().endswith(".pdf"):
+            if (
+                fallback_name
+                and fallback_name not in {".", ".."}
+                and fallback_name.lower().endswith(".pdf")
+            ):
                 target = (LOCAL_PDF_DIRS[0] / fallback_name).resolve()
                 allowed = True
 
@@ -531,7 +547,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
             if not html_data:
                 req = urllib.request.Request(raw_url, headers={"User-Agent": "Mozilla/5.0"})
-                html_data = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", errors="ignore")
+                html_data = (
+                    urllib.request.urlopen(req, timeout=20).read().decode("utf-8", errors="ignore")
+                )
         except Exception:
             self.send_error(502, "Unable to fetch source page")
             return
@@ -554,7 +572,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def _find_deploy_zip(self) -> Path | None:
         # Prefer full package, then lite, then older bundled variants.
-        for name in ("Atlas_GitHub_Portfolio_full_v6.zip", "Atlas_GitHub_Portfolio_full_v5.zip", "Atlas_GitHub_Portfolio_full_v4.zip", "Atlas_GitHub_Portfolio_full_v3.zip", "Atlas_GitHub_Portfolio_full_v2.zip", "Atlas_GitHub_Portfolio_full.zip", "Atlas_GitHub_Portfolio_ship_lite.zip"):
+        for name in (
+            "Atlas_GitHub_Portfolio_full_v6.zip",
+            "Atlas_GitHub_Portfolio_full_v5.zip",
+            "Atlas_GitHub_Portfolio_full_v4.zip",
+            "Atlas_GitHub_Portfolio_full_v3.zip",
+            "Atlas_GitHub_Portfolio_full_v2.zip",
+            "Atlas_GitHub_Portfolio_full.zip",
+            "Atlas_GitHub_Portfolio_ship_lite.zip",
+        ):
             candidate = BASE_DIR.parent / name
             if candidate.exists():
                 return candidate
@@ -597,7 +623,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 </a>
             </p>
             <p style="font-size:12px;color:#666;">File: {html.escape(zip_name)}</p>"""
-            download_block = download_block.replace('/download/atlas', f'/download/atlas?v={zip_token}')
+            download_block = download_block.replace(
+                "/download/atlas", f"/download/atlas?v={zip_token}"
+            )
         else:
             download_block = '<p style="color:#b00;margin-top:16px;">Deploy zip not found on server. Run the deploy zip build first.</p>'
 
@@ -734,6 +762,7 @@ h1{{color:#003da5}}ol li{{margin-bottom:10px}}code{{background:#f0f4ff;padding:2
 
     def _serve_file_direct(self, file_path: Path):
         import mimetypes
+
         mime_type, _ = mimetypes.guess_type(str(file_path))
         if not mime_type:
             mime_type = "application/octet-stream"
@@ -784,8 +813,8 @@ def start_server():
     with ReuseAddrTCPServer((HOST, PORT), Handler) as httpd:
         print(f"\n✅ Atlas Law Server running at http://{HOST}:{PORT}")
         print(f"📍 Base path: {BASE_DIR}")
-        print(f"🔒 Serving Atlas-only allowlist (no directory browsing)")
-        print(f"🌐 Press Ctrl+C to stop\n")
+        print("🔒 Serving Atlas-only allowlist (no directory browsing)")
+        print("🌐 Press Ctrl+C to stop\n")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

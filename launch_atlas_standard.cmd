@@ -27,8 +27,13 @@ if errorlevel 1 (
 REM Start server in a new (visible) window - user can close it when done
 start "Atlas Law Server" powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0start_atlas_server.ps1"
 
-REM Wait for server to be ready
-timeout /t 3 /nobreak >nul
+REM Wait until Atlas actually responds before opening the browser
+powershell.exe -NoProfile -Command "$ready = $false; for ($i = 0; $i -lt 60; $i++) { try { $r = Invoke-WebRequest -Uri 'http://127.0.0.1:8080/ninth' -UseBasicParsing -TimeoutSec 1; if ($r.StatusCode -eq 200) { $ready = $true; break } } catch {}; Start-Sleep -Milliseconds 500 }; if (-not $ready) { exit 1 }"
+if errorlevel 1 (
+	echo [ERROR] Atlas server did not become ready within 30 seconds.
+	pause
+	exit /b 1
+)
 
 start "" "http://127.0.0.1:8080/ninth"
 endlocal

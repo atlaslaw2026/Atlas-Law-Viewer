@@ -1,16 +1,16 @@
 """Central District (C.D. Cal.) opinions viewer generator (Justia 2026)."""
 
+import hashlib
+import html as html_lib
 import json
+import logging
 import os
 import re
-import hashlib
 import sqlite3
-import html as html_lib
 import urllib.parse
 import urllib.request
 import webbrowser
 from datetime import datetime
-import logging
 
 try:
     import cloudscraper
@@ -32,22 +32,28 @@ LIST_SOURCE_URL = "https://law.justia.com/cases/federal/district-courts/californ
 LISTING_RAW_FALLBACK_FILE = os.path.join(BASE_DIR, "central_live_listing_raw.txt")
 MAX_FETCH_PER_RUN = int(os.getenv("CENTRAL_FETCH_LIMIT", "300"))
 MAX_PDF_DOWNLOAD_PER_RUN = int(os.getenv("CENTRAL_PDF_LIMIT", "300"))
-SKIP_LOCAL_PDF_READ = os.getenv("CENTRAL_SKIP_PDF_READ", "0").strip() in {"1", "true", "TRUE", "yes", "YES"}
+SKIP_LOCAL_PDF_READ = os.getenv("CENTRAL_SKIP_PDF_READ", "0").strip() in {
+    "1",
+    "true",
+    "TRUE",
+    "yes",
+    "YES",
+}
 
 CASE_PATTERNS = [
-    r'([A-Z][a-zA-Z0-9\s&,.\'\-]{3,50}?)\s+v\.\s+([A-Z][a-zA-Z0-9\s&,.\'\-]{3,50}?),\s+(\d+)\s+(U\.S\.|F\.\d?d|F\.\d?th|P\.\d?d|S\.Ct\.|Cal\.\s?App)',
-    r'([A-Z][a-zA-Z0-9\s&,.\'\-]{3,60}?)\s+v\.\s+([A-Z][a-zA-Z0-9\s&,.\'\-]{3,60}?)',
-    r'(In\s+re\s+[A-Z][A-Za-z0-9\s&,.\'\-]{3,80})',
+    r"([A-Z][a-zA-Z0-9\s&,.\'\-]{3,50}?)\s+v\.\s+([A-Z][a-zA-Z0-9\s&,.\'\-]{3,50}?),\s+(\d+)\s+(U\.S\.|F\.\d?d|F\.\d?th|P\.\d?d|S\.Ct\.|Cal\.\s?App)",
+    r"([A-Z][a-zA-Z0-9\s&,.\'\-]{3,60}?)\s+v\.\s+([A-Z][a-zA-Z0-9\s&,.\'\-]{3,60}?)",
+    r"(In\s+re\s+[A-Z][A-Za-z0-9\s&,.\'\-]{3,80})",
 ]
 STATUTE_PATTERNS = [
-    r'(\d+)\s+U\.S\.C\.?\s*§?\s*(\d+[a-zA-Z0-9\-]*)',
+    r"(\d+)\s+U\.S\.C\.?\s*§?\s*(\d+[a-zA-Z0-9\-]*)",
 ]
 REGULATION_PATTERNS = [
-    r'(\d+)\s+C\.F\.R\.?\s*§?\s*(\d+(?:\.\d+)*)',
+    r"(\d+)\s+C\.F\.R\.?\s*§?\s*(\d+(?:\.\d+)*)",
 ]
 RULE_PATTERNS = [
-    r'Fed\.\s+R\.[A-Za-z\.\s]*\s+\d+(?:\([a-zA-Z0-9]+\))*',
-    r'Rule\s+\d+(?:\([a-zA-Z0-9]+\))*',
+    r"Fed\.\s+R\.[A-Za-z\.\s]*\s+\d+(?:\([a-zA-Z0-9]+\))*",
+    r"Rule\s+\d+(?:\([a-zA-Z0-9]+\))*",
 ]
 
 LOGGER = logging.getLogger(__name__)
@@ -65,7 +71,9 @@ def fetch_markdown(url: str, timeout: int = 12) -> str:
 
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     try:
-        return urllib.request.urlopen(request, timeout=timeout).read().decode("utf-8", errors="ignore")
+        return (
+            urllib.request.urlopen(request, timeout=timeout).read().decode("utf-8", errors="ignore")
+        )
     except Exception:
         return ""
 
@@ -96,10 +104,7 @@ def load_listing_from_browser_dump(file_path: str = LISTING_RAW_FALLBACK_FILE) -
         raw = raw[1:-1]
 
     decoded = (
-        raw.replace("\\r\\n", "\n")
-        .replace("\\n", "\n")
-        .replace("\\t", "\t")
-        .replace('\\"', '"')
+        raw.replace("\\r\\n", "\n").replace("\\n", "\n").replace("\\t", "\t").replace('\\"', '"')
     )
 
     cases: list[dict] = []
@@ -184,8 +189,12 @@ def clean_case_citations(items: list[str], title: str | None = None) -> list[str
 
         value = re.sub(r"^[^A-Z]*(?=[A-Z])", "", value)
 
-        value = re.sub(r"^(?:See|Cf\.|But\s+see|Compare|quoting)\s+", "", value, flags=re.IGNORECASE)
-        signaled = re.split(r"\b(?:See|Cf\.|But\s+see|Compare|quoting)\b", value, flags=re.IGNORECASE)
+        value = re.sub(
+            r"^(?:See|Cf\.|But\s+see|Compare|quoting)\s+", "", value, flags=re.IGNORECASE
+        )
+        signaled = re.split(
+            r"\b(?:See|Cf\.|But\s+see|Compare|quoting)\b", value, flags=re.IGNORECASE
+        )
         if len(signaled) > 1:
             value = normalize_ws(signaled[-1]).strip(" ,;:")
 
@@ -196,7 +205,6 @@ def clean_case_citations(items: list[str], title: str | None = None) -> list[str
         is_title = title and value.lower() == normalize_ws(normalize_text(title)).lower()
         has_v = bool(re.search(r"\bv\.\s", value, flags=re.IGNORECASE))
         has_in_re = bool(re.search(r"^\s*in\s+re\b", value, flags=re.IGNORECASE))
-        has_reporter = bool(re.search(r"\b\d+\s+[A-Z][A-Za-z.\d ]{0,20}\s+\d+\b", value))
 
         if blocked_pattern.search(value):
             continue
@@ -208,14 +216,17 @@ def clean_case_citations(items: list[str], title: str | None = None) -> list[str
             continue
 
         lowered = value.lower()
-        if any(token in lowered for token in [
-            "download pdf",
-            "final judgment",
-            "dockets.justia.com",
-            "united states district court",
-            "order granting",
-            "doc.",
-        ]):
+        if any(
+            token in lowered
+            for token in [
+                "download pdf",
+                "final judgment",
+                "dockets.justia.com",
+                "united states district court",
+                "order granting",
+                "doc.",
+            ]
+        ):
             continue
 
         if has_v:
@@ -263,7 +274,12 @@ def collapse_duplicate_opinions(items: list[dict]) -> list[dict]:
         text_len = len(normalize_ws(op.get("text") or ""))
         has_pdf = 1 if (op.get("pdf_url") or op.get("local_pdf_path")) else 0
         auth_count = len(((op.get("authorities") or {}).get("cases") or []))
-        date_quality = 1 if (op.get("issue_date") or "").endswith("-00-00") is False and (op.get("issue_date") or "") else 0
+        date_quality = (
+            1
+            if (op.get("issue_date") or "").endswith("-00-00") is False
+            and (op.get("issue_date") or "")
+            else 0
+        )
         return (date_quality, has_pdf, text_len, auth_count)
 
     grouped: dict[tuple[str, str, str], dict] = {}
@@ -292,7 +308,9 @@ def build_preview(full_text: str, date_value: str, docket_value: str) -> str:
     if not source:
         return f"Date: {date_value} | Docket: {docket_value}"
 
-    source = re.sub(r"\b(?:ORDER|JUDGMENT|MEMORANDUM OPINION)\b\s*[:\-]?", "", source, flags=re.IGNORECASE)
+    source = re.sub(
+        r"\b(?:ORDER|JUDGMENT|MEMORANDUM OPINION)\b\s*[:\-]?", "", source, flags=re.IGNORECASE
+    )
     source = re.sub(r"\bDKT\.?\s*NO\.?\s*\d+\b", "", source, flags=re.IGNORECASE)
 
     parts = re.split(r"(?<=[.!?])\s+", source)
@@ -329,19 +347,33 @@ def _extract_caption_candidate(text: str | None) -> str:
     if not source:
         return ""
 
-    source = re.sub(r"United States District Court Central District of California", " ", source, flags=re.IGNORECASE)
+    source = re.sub(
+        r"United States District Court Central District of California",
+        " ",
+        source,
+        flags=re.IGNORECASE,
+    )
     source = re.sub(r"\b\d{1,2}\b", " ", source)
     source = re.sub(r"\s{2,}", " ", source).strip()
 
-    match = re.search(r"([A-Z][A-Za-z0-9&.,'\-\s]{2,90}?)\s+v\.\s+([A-Z][A-Za-z0-9&.,'\-\s]{2,90})", source)
+    match = re.search(
+        r"([A-Z][A-Za-z0-9&.,'\-\s]{2,90}?)\s+v\.\s+([A-Z][A-Za-z0-9&.,'\-\s]{2,90})", source
+    )
     if not match:
         return ""
 
     left = normalize_ws(match.group(1)).strip(" ,.;:")
     right = normalize_ws(match.group(2)).strip(" ,.;:")
-    left = re.split(r"\b(?:Petitioner|Plaintiff|Defendant|Respondent)\b", left, maxsplit=1, flags=re.IGNORECASE)[0]
+    left = re.split(
+        r"\b(?:Petitioner|Plaintiff|Defendant|Respondent)\b", left, maxsplit=1, flags=re.IGNORECASE
+    )[0]
     left = normalize_ws(left).strip(" ,.;:")
-    right = re.split(r"\b(?:Case|No\.|Doc\.|Petitioner|Plaintiff|Defendant|Respondent|et\s+al\.)\b", right, maxsplit=1, flags=re.IGNORECASE)[0]
+    right = re.split(
+        r"\b(?:Case|No\.|Doc\.|Petitioner|Plaintiff|Defendant|Respondent|et\s+al\.)\b",
+        right,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0]
     right = normalize_ws(right).strip(" ,.;:")
 
     caption = f"{left} v. {right}".strip()
@@ -350,7 +382,9 @@ def _extract_caption_candidate(text: str | None) -> str:
     return caption
 
 
-def clean_display_title(raw_title: str | None, full_text: str | None, docket_value: str | None) -> str:
+def clean_display_title(
+    raw_title: str | None, full_text: str | None, docket_value: str | None
+) -> str:
     title = normalize_ws(normalize_text(raw_title))
 
     if title:
@@ -372,7 +406,9 @@ def clean_display_title(raw_title: str | None, full_text: str | None, docket_val
         return from_text
 
     body = normalize_ws(normalize_text(full_text or ""))
-    match = re.search(r"([A-Z][A-Za-z0-9&.,'\-\s]{3,120}\s+v\.\s+[A-Z][A-Za-z0-9&.,'\-\s]{3,120})", body)
+    match = re.search(
+        r"([A-Z][A-Za-z0-9&.,'\-\s]{3,120}\s+v\.\s+[A-Z][A-Za-z0-9&.,'\-\s]{3,120})", body
+    )
     if match:
         candidate = normalize_ws(match.group(1)).strip(" ,.;:")
         if candidate and len(candidate) <= 170:
@@ -554,7 +590,9 @@ def _derive_title_from_cache(url: str, detail: dict) -> str:
         return explicit_title
 
     body = normalize_ws(normalize_text((detail or {}).get("text") or ""))
-    title_match = re.search(r"([A-Z][A-Za-z0-9&.,'\-\s]{3,120}\s+v\.\s+[A-Z][A-Za-z0-9&.,'\-\s]{3,120})", body)
+    title_match = re.search(
+        r"([A-Z][A-Za-z0-9&.,'\-\s]{3,120}\s+v\.\s+[A-Z][A-Za-z0-9&.,'\-\s]{3,120})", body
+    )
     if title_match:
         candidate = normalize_ws(title_match.group(1)).strip(" ,.;:")
         if candidate and "quoting " not in candidate.lower():
@@ -601,7 +639,9 @@ def _derive_year_seq_from_docket(docket_value: str) -> tuple[int, int]:
     year = 0
     seq = 0
 
-    year_match = re.search(r"(?:^|\D)((?:19|20)\d{2})\s*(?:cv|cr|mc|bk|po)", text, flags=re.IGNORECASE)
+    year_match = re.search(
+        r"(?:^|\D)((?:19|20)\d{2})\s*(?:cv|cr|mc|bk|po)", text, flags=re.IGNORECASE
+    )
     if year_match:
         year = int(year_match.group(1))
     else:
@@ -621,7 +661,9 @@ def _derive_year_seq_from_docket(docket_value: str) -> tuple[int, int]:
 
 
 def _derive_sort_components(op: dict) -> tuple[str, int]:
-    exact_date = parse_issue_date(op.get("date") or "") or parse_issue_date(op.get("issue_date") or "")
+    exact_date = parse_issue_date(op.get("date") or "") or parse_issue_date(
+        op.get("issue_date") or ""
+    )
     year, seq = _derive_year_seq_from_docket(op.get("docket") or "")
 
     if exact_date:
@@ -640,7 +682,9 @@ def build_cases_from_cache(cache: dict) -> list[dict]:
         docket = docket_match.group(1) if docket_match else ""
         title = _derive_title_from_cache(url, detail)
         date_value = normalize_ws((detail or {}).get("date") or "")
-        issue_date = parse_issue_date((detail or {}).get("issue_date") or "") or parse_issue_date(date_value)
+        issue_date = parse_issue_date((detail or {}).get("issue_date") or "") or parse_issue_date(
+            date_value
+        )
 
         cases.append(
             {
@@ -760,8 +804,7 @@ def extract_pdf_metadata_date(pdf_path: str) -> str:
 
 def ensure_central_db(conn: sqlite3.Connection) -> None:
     cur = conn.cursor()
-    cur.execute(
-        """
+    cur.execute("""
         CREATE TABLE IF NOT EXISTS central_opinions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             url TEXT UNIQUE NOT NULL,
@@ -777,8 +820,7 @@ def ensure_central_db(conn: sqlite3.Connection) -> None:
             created_at TEXT,
             updated_at TEXT
         )
-        """
-    )
+        """)
     cur.execute("CREATE INDEX IF NOT EXISTS idx_central_issue_date ON central_opinions(issue_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_central_docket ON central_opinions(docket)")
     conn.commit()
@@ -924,7 +966,11 @@ def fetch_case_details(case_url: str) -> dict:
     mirrored = mirror_case_url(case_url)
     text = fetch_markdown(mirrored, timeout=12)
     if not text:
-        return {"text": "", "pdf_url": "", "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []}}
+        return {
+            "text": "",
+            "pdf_url": "",
+            "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []},
+        }
     body = extract_main_text(text)
     cites = extract_citations(body)
 
@@ -1029,7 +1075,9 @@ def export_data() -> int:
             source_used = "json"
 
     if not cases:
-        raise RuntimeError("Could not build Central District dataset from source, local JSON, or cache")
+        raise RuntimeError(
+            "Could not build Central District dataset from source, local JSON, or cache"
+        )
 
     for idx, item in enumerate(cases, start=1):
         item.setdefault("id", idx)
@@ -1046,13 +1094,15 @@ def export_data() -> int:
         detail = cache.get(key)
         previous_detail = detail if isinstance(detail, dict) else {}
         needs_refresh = (
-            not isinstance(detail, dict)
-            or not detail.get("text")
-            or not detail.get("pdf_url")
+            not isinstance(detail, dict) or not detail.get("text") or not detail.get("pdf_url")
         )
         if needs_refresh:
             if attempted >= MAX_FETCH_PER_RUN:
-                detail = {"text": "", "pdf_url": "", "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []}}
+                detail = {
+                    "text": "",
+                    "pdf_url": "",
+                    "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []},
+                }
             else:
                 attempted += 1
             try:
@@ -1071,12 +1121,18 @@ def export_data() -> int:
                 if previous_detail.get("text") or previous_detail.get("pdf_url"):
                     detail = previous_detail
                 else:
-                    detail = {"text": "", "pdf_url": "", "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []}}
+                    detail = {
+                        "text": "",
+                        "pdf_url": "",
+                        "citations": {"cases": [], "statutes": [], "rules": [], "regulations": []},
+                    }
 
         detail["title"] = item.get("title") or detail.get("title") or ""
         detail["docket"] = item.get("docket") or detail.get("docket") or ""
         detail["date"] = item.get("date") or detail.get("date") or ""
-        detail_issue = parse_issue_date(item.get("issue_date") or "") or parse_issue_date(item.get("date") or "")
+        detail_issue = parse_issue_date(item.get("issue_date") or "") or parse_issue_date(
+            item.get("date") or ""
+        )
         if detail_issue:
             detail["issue_date"] = detail_issue
         cache[key] = detail
@@ -1085,8 +1141,17 @@ def export_data() -> int:
         if is_noisy_page_text(full_text):
             full_text = ""
         item["title"] = clean_display_title(item.get("title"), full_text, item.get("docket"))
-        raw_citations = detail.get("citations") or {"cases": [], "statutes": [], "rules": [], "regulations": []}
-        extracted = extract_citations(full_text) if full_text else {"cases": [], "statutes": [], "rules": [], "regulations": []}
+        raw_citations = detail.get("citations") or {
+            "cases": [],
+            "statutes": [],
+            "rules": [],
+            "regulations": [],
+        }
+        extracted = (
+            extract_citations(full_text)
+            if full_text
+            else {"cases": [], "statutes": [], "rules": [], "regulations": []}
+        )
         reporter_cases = extract_case_citations_from_text(full_text, limit=50)
 
         pdf_text = ""
@@ -1096,13 +1161,24 @@ def export_data() -> int:
             pdf_text = extract_pdf_text(expected_local_pdf, max_pages=25)
             pdf_meta_date = extract_pdf_metadata_date(expected_local_pdf)
 
-        pdf_reporter_cases = extract_case_citations_from_text(pdf_text, limit=80) if pdf_text else []
+        pdf_reporter_cases = (
+            extract_case_citations_from_text(pdf_text, limit=80) if pdf_text else []
+        )
 
         if full_text or pdf_text:
-            case_candidates = pdf_reporter_cases + reporter_cases + (extracted.get("cases") or []) + (raw_citations.get("cases") or [])
-            statute_candidates = (extracted.get("statutes") or []) + (raw_citations.get("statutes") or [])
+            case_candidates = (
+                pdf_reporter_cases
+                + reporter_cases
+                + (extracted.get("cases") or [])
+                + (raw_citations.get("cases") or [])
+            )
+            statute_candidates = (extracted.get("statutes") or []) + (
+                raw_citations.get("statutes") or []
+            )
             rule_candidates = (extracted.get("rules") or []) + (raw_citations.get("rules") or [])
-            regulation_candidates = (extracted.get("regulations") or []) + (raw_citations.get("regulations") or [])
+            regulation_candidates = (extracted.get("regulations") or []) + (
+                raw_citations.get("regulations") or []
+            )
         else:
             case_candidates = []
             statute_candidates = []
@@ -1179,9 +1255,13 @@ def export_data() -> int:
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(cases, f, ensure_ascii=False, indent=2)
 
-    print(f"[OK] Exported {len(cases)} Central District opinions ({updated} fetched/updated this run, attempted {attempted}, cap {MAX_FETCH_PER_RUN})")
+    print(
+        f"[OK] Exported {len(cases)} Central District opinions ({updated} fetched/updated this run, attempted {attempted}, cap {MAX_FETCH_PER_RUN})"
+    )
     print(f"[OK] Listing source used: {source_used}")
-    print(f"[OK] Database upserts: {upserts} into central_opinions | PDFs downloaded this run: {downloaded}")
+    print(
+        f"[OK] Database upserts: {upserts} into central_opinions | PDFs downloaded this run: {downloaded}"
+    )
     return len(cases)
 
 
@@ -1189,7 +1269,8 @@ def create_html(count: int) -> None:
     with open(JSON_FILE, "r", encoding="utf-8") as f:
         embedded_json = f.read().replace("</script", "<\\/script")
 
-    html = """
+    html = (
+        """
 <!DOCTYPE html>
 <html>
 <head>
@@ -1425,7 +1506,9 @@ def create_html(count: int) -> None:
             <a class="view-link" href="/opinions_index.html">Ninth Circuit</a>
             <a class="view-link active" href="/central_opinions_index.html">Central District (C.D. Cal.)</a>
         </div>
-        <div class="stats"><span id="total-count">""" + str(count) + """</span> opinions | Searchable</div>
+        <div class="stats"><span id="total-count">"""
+        + str(count)
+        + """</span> opinions | Searchable</div>
         <div class="update-controls">
             <button id="update-all-btn" class="update-btn" onclick="runAtlasRefresh()">Update All Courts</button>
             <span id="update-status" class="update-status">Idle</span>
@@ -1830,6 +1913,7 @@ def create_html(count: int) -> None:
 </body>
 </html>
 """
+    )
 
     html = html.replace("__EMBEDDED_OPINIONS__", embedded_json)
 
