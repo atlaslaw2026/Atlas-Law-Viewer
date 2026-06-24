@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Extractor — Clinton Brown v. Steve Smead</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; margin: 0; background: #f5f6f8; color: #222; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 14px; margin-bottom: 14px; }
+    h1 { margin: 0 0 8px; font-size: 24px; }
+    h2 { margin: 0 0 10px; font-size: 18px; }
+    .muted { color: #666; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+    .phase { border-left: 4px solid #2c6bed; padding-left: 10px; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #eee; padding: 8px; text-align: left; vertical-align: top; }
+    th { background: #fafafa; position: sticky; top: 0; }
+    .warn { background: #fff4e5; border: 1px solid #ffd59e; color: #7a4b00; padding: 10px; border-radius: 8px; }
+    .small { font-size: 12px; }
+    a { color: #0a58ca; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Case Extractor</h1>
+      <div id="case-meta" class="muted"></div>
+      <div id="status-box" class="warn" style="display:none; margin-top:10px;"></div>
+    </div>
+
+    <div class="card">
+      <h2>Major Pretrial Timeline</h2>
+      <div id="timeline"></div>
+    </div>
+
+    <div class="card">
+      <h2>All Docket Entries</h2>
+      <div class="small muted">Sorted by filing date, then entry number</div>
+      <div style="max-height: 480px; overflow:auto; margin-top:8px;">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Date Filed</th><th>Description</th><th>Docs</th></tr>
+          </thead>
+          <tbody id="entries"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadData() {
+      const res = await fetch('/case_extractor_data.json?v=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('Unable to load case_extractor_data.json');
+      return await res.json();
+    }
+
+    function esc(v) {
+      return (v ?? '').toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+    function resolveUrl(url) {
+      if (!url) return '';
+      if (/^https?:\/\//i.test(url)) return url;
+      return `https://www.courtlistener.com${url}`;
+    }
+
+    function render(data) {
+      const meta = document.getElementById('case-meta');
+      const docket = data.docket || {};
+      meta.innerHTML = `
+        <div><strong>${esc(docket.case_name || 'Clinton Brown v. Steve Smead')}</strong></div>
+        <div>Docket ID: ${esc((data.source || {}).docket_id)} | Entries: ${esc(data.entry_count)}</div>
+        <div>Source: <a href="${esc((data.source || {}).docket_url)}" target="_blank" rel="noopener">CourtListener Docket</a></div>
+      `;
+
+      const source = data.source || {};
+      if (source.status !== 'fetched') {
+        const box = document.getElementById('status-box');
+        box.style.display = 'block';
+        box.innerHTML = `Data source status: <strong>${esc(source.status || 'unknown')}</strong>. ${esc(source.message || '')}<br/>` +
+          `No-token option: run the browser console extractor in <code>case_extractor/browser_extract.js</code>, save to <code>case_extractor/manual_docket_entries.json</code>, then run <code>python case_extractor/build_case_extractor.py</code>.<br/>` +
+          `Token option: set <code>COURTLISTENER_API_TOKEN</code> and run the same build command.`;
+      }
+
+      const timeline = document.getElementById('timeline');
+      const tl = data.pretrial_timeline || [];
+      timeline.innerHTML = tl.length
+        ? tl.map(p => `
+            <div class="phase">
+              <div><strong>${esc(p.phase)}</strong> — starts ${esc(p.start_date || 'Unknown date')} (${esc(p.entry_count)} entries)</div>
+              <ul>${(p.highlights || []).map(h => `<li>[${esc(h.entry_number ?? '')}] ${esc(h.date_filed || '')} — ${h.url ? `<a target="_blank" rel="noopener" href="${esc(h.url)}">${esc(h.description || '')}</a>` : esc(h.description || '')}</li>`).join('')}</ul>
+            </div>
+          `).join('')
+        : '<div class="muted">No timeline entries available yet.</div>';
+
+      const rows = document.getElementById('entries');
+      rows.innerHTML = (data.entries || []).map(e => {
+        const docs = Array.isArray(e.recap_documents) ? e.recap_documents : [];
+        const docCount = docs.length;
+        const docsHtml = docs.length
+          ? docs.slice(0, 6).map((doc, index) => {
+              const local = (doc && doc.local_pdf_path)
+                ? `/api/local_pdf?path=${encodeURIComponent(doc.local_pdf_path)}`
+                : '';
+              const remote = resolveUrl((doc && (doc.url || doc.filepath_local || doc.filepath_ia)) || '');
+              const href = local || remote;
+              if (!href) return '';
+              return `<a target="_blank" rel="noopener" href="${esc(href)}">Doc ${index + 1}</a>`;
+            }).filter(Boolean).join('<br/>')
+          : '';
+        const url = resolveUrl(e.absolute_url);
+        return `<tr>
+          <td>${esc(e.entry_number ?? '')}</td>
+          <td>${esc(e.date_filed || '')}</td>
+          <td>${url ? `<a target="_blank" rel="noopener" href="${esc(url)}">${esc(e.description || '')}</a>` : esc(e.description || '')}</td>
+          <td>${docsHtml || esc(docCount)}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    loadData().then(render).catch(err => {
+      document.getElementById('status-box').style.display = 'block';
+      document.getElementById('status-box').textContent = err.message;
+    });
+  </script>
+</body>
+</html>

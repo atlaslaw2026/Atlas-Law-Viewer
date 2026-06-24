@@ -1,0 +1,45 @@
+# Secrets - NEVER commit
+.env
+
+# Local database
+atlas_law.db
+atlas_law.backup*.db
+
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# App runtime output
+logs/
+*.log
+runtime/python/
+runtime/_build_tmp/
+
+# Keep repository lightweight (PDF corpora are local-only by default)
+ninth_pdfs/*
+central_pdfs/*
+case_extractor/documents/*
+!ninth_pdfs/.gitkeep
+!central_pdfs/.gitkeep
+!case_extractor/documents/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.lnk
+.vscode/
+
+# Optional: generated single-opinion pages
+opinion_viewer_*.html
+
+# Packaging artifacts (keep out of source repo)
+Atlas_GitHub_Portfolio_full_v*.zip
+Atlas_GitHub_Portfolio_deploy*.zip
+Atlas_GitHub_Portfolio_folder_exact*.zip
+installer/build/
+installer/dist/

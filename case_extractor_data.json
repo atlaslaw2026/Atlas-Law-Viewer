@@ -1,0 +1,4425 @@
+{
+  "generated_at": "2026-02-28T00:21:32.822918+00:00",
+  "source": {
+    "docket_id": 67232938,
+    "docket_url": "https://www.courtlistener.com/docket/67232938/clinton-brown-v-steve-smead/",
+    "status": "manual_import",
+    "message": "Loaded 136 entries from manual_docket_entries.json.",
+    "api_token_present": false,
+    "local_cache": {
+      "attempted": 40,
+      "downloaded": 40,
+      "linked_local": 40,
+      "download_cap": 40
+    }
+  },
+  "docket": {
+    "id": 67232938,
+    "case_name": "Clinton Brown v. Steve Smead",
+    "url": "https://www.courtlistener.com/docket/67232938/clinton-brown-v-steve-smead/"
+  },
+  "entry_count": 136,
+  "entries": [
+    {
+      "id": null,
+      "entry_number": 1,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.1.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0001_doc_01_45a6c49cfa0c.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.1.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0001_doc_02_3e3d73d503b1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 7,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/7/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.7.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0007_doc_01_a0edcb72f4fd.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 8,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/8/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.8.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0008_doc_01_73f6116bfff9.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 9,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/9/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.9.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0009_doc_01_c155269e8d3d.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 10,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/10/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.10.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0010_doc_01_2ea2533f3293.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.10.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0010_doc_02_1dd8436272e6.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 12,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/12/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.12.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0012_doc_01_37be0edff38d.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.12.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0012_doc_02_075f32c5ce53.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 15,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/15/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.15.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0015_doc_01_3b0e23d424f8.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.15.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0015_doc_02_35832cec1a79.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 16,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/16/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.16.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0016_doc_01_b6f320d53ef2.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.16.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0016_doc_02_0a542d2bd2be.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 17,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/17/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.17.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0017_doc_01_fcdc922d5b3b.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 18,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/18/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.18.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0018_doc_01_1354f6cefe32.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 20,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/20/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.20.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0020_doc_01_f692c58f9583.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.20.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0020_doc_02_afa256e79457.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 21,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/21/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.21.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0021_doc_01_569f7ecad348.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.21.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0021_doc_02_1f2456d722a5.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 22,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/22/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.22.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0022_doc_01_01334350bc2a.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.22.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0022_doc_02_8d7212d3d7a3.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 24,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/24/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.24.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0024_doc_01_a854a4d99eb5.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.24.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0024_doc_02_881476cd8946.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 25,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/25/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.25.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0025_doc_01_8106facebc5a.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.25.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0025_doc_02_740315882938.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 26,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/26/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.26.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0026_doc_01_1851ca75498a.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.26.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0026_doc_02_a1689fd610e6.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 27,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/27/4/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_01_bf2e81fd0748.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_02_c899ba548906.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.1.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_03_7f9ba7d45185.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.1.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_04_a8865f0f5c15.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.2.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_05_887a3355d3e0.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.2.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_06_152e8a3f7182.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.3.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_07_5d9520495276.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.3.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_08_3122b4ce524a.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.4.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_09_c76096c6419a.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.27.4.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0027_doc_10_0d93943cddd2.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 28,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/28/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.28.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0028_doc_01_ca534dfffd91.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.28.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0028_doc_02_d734f13c50cd.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 29,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/29/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.29.0.pdf",
+          "local_pdf_path": "G:\\Atlas_Law_Viewer\\case_extractor\\documents\\entry_0029_doc_01_12826415288c.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.29.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 30,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/30/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.30.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.30.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.30.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.30.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 31,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/31/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.31.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.31.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 33,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/33/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.33.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.33.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 34,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/34/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.34.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.34.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 35,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/35/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.35.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.35.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 36,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/36/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.36.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.36.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 37,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/37/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.37.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.37.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 40,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/40/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.40.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.40.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 41,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/41/5/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.3.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.4.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.4.pdf"
+        },
+        {
+          "document_number": 11,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.5.pdf"
+        },
+        {
+          "document_number": 12,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.41.5.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 42,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/42/2/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.42.2.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 43,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/43/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.43.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.43.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 45,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/45/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.45.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.45.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 46,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/46/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.46.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.46.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.46.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.46.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 47,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/47/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.47.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.47.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 48,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/48/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.48.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.48.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 49,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/49/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.49.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.49.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 50,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/50/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.50.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.50.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 52,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/52/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.52.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.52.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 53,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/53/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.53.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.53.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 54,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/54/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.54.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.54.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 55,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/55/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.55.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.55.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 56,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/56/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.56.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.56.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 57,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/57/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.57.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.57.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 58,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/58/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.58.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.58.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 59,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/59/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.59.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.59.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.59.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.59.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 60,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/60/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.60.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.60.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 61,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/61/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.61.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.61.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 62,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/62/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.62.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.62.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 63,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/63/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.63.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.63.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 64,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/64/2/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.64.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.64.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 65,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/65/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.65.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.65.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 68,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/68/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.68.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.68.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 69,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/69/2/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.69.2.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 70,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/70/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.70.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.70.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 71,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/71/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.71.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.71.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 73,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/73/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.73.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.73.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 74,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/74/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.74.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.74.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 75,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/75/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.75.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.75.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 76,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/76/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.76.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.76.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 77,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/77/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.77.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.77.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 78,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/78/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.78.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.78.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 79,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/79/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.79.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.79.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 81,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/81/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.81.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.81.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 82,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/82/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.82.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.82.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 83,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/83/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.83.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.83.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 86,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/86/3/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.86.3.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 89,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/89/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.89.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.89.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 90,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/90/2/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.90.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.90.1.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.90.2.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 91,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/91/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.91.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.91.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 92,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/92/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.92.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.92.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.92.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.92.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 93,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/93/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.93.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.93.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 94,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/94/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.94.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.94.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 95,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/95/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.95.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.95.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 96,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/96/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.96.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.96.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 97,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/97/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.97.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.97.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 98,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/98/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.98.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.98.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 100,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/100/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.100.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.100.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 101,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/101/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.101.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.101.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 102,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/102/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.102.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.102.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 103,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/103/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.103.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.103.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 104,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/104/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.104.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.104.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 106,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/106/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.106.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.106.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 107,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/107/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.107.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.107.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 108,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/108/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.108.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.108.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 109,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/109/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.109.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.109.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 110,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/110/5/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.3.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.4.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.4.pdf"
+        },
+        {
+          "document_number": 11,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.5.pdf"
+        },
+        {
+          "document_number": 12,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.110.5.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 111,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/111/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.111.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.111.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 113,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/113/5/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.3.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.4.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.4.pdf"
+        },
+        {
+          "document_number": 11,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.5.pdf"
+        },
+        {
+          "document_number": 12,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.113.5.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 114,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Attach­ment 1",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/114/5/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.1.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.1.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.2.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.2.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.3.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.3.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.4.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.4.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.5.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.114.5.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 115,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/115/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.115.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.115.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 116,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/116/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.116.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.116.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 121,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/121/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.121.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.121.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 122,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/122/4/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.3.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.4.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.122.4.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 123,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/123/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.123.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.123.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 124,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/124/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.124.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.124.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 125,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/125/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.125.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.125.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 126,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/126/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.126.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.126.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 127,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/127/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.127.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.127.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 128,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/128/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.128.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.128.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 129,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/129/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.129.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.129.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 130,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/130/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.130.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.130.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 131,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/131/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.131.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.131.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 132,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/132/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.132.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.132.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 133,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/133/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.133.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.133.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 134,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/134/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.134.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.134.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 135,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/135/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.135.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.135.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 136,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/136/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.136.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.136.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 137,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/137/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.137.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.137.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 138,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/138/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.138.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.138.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 139,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/139/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.139.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.139.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 140,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/140/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.140.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.140.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 141,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/141/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.141.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.141.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 142,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/142/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.142.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.142.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 143,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/143/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.143.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.143.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 144,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/144/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.144.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.144.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 145,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/145/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.145.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.145.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 146,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/146/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.146.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.146.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 147,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/147/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.147.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.147.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 148,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/148/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.148.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.148.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 149,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/149/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.149.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.149.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 150,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/150/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.150.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.150.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 151,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/151/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.151.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.151.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 152,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/152/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.152.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.152.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 153,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/153/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.153.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.153.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 154,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/154/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.154.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.154.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 155,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/155/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.155.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.155.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 156,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/156/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.156.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.156.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 157,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/157/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.157.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.157.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 158,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/158/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.158.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.158.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 159,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/159/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.159.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.159.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.159.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.159.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 160,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/160/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.160.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.160.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.160.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.160.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 161,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/161/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.161.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.161.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.161.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.161.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 162,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/162/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.162.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.162.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.162.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.162.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 164,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/164/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.164.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.164.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 166,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/166/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.166.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.166.0.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 167,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/167/1/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.167.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.167.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.167.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.167.1.pdf"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "entry_number": 168,
+      "date_filed": null,
+      "date_created": null,
+      "description": "Main Doc­ument",
+      "absolute_url": "https://www.courtlistener.com/docket/67232938/168/7/clinton-brown-v-steve-smead/",
+      "recap_documents": [
+        {
+          "document_number": 1,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.0.pdf"
+        },
+        {
+          "document_number": 2,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.0.pdf"
+        },
+        {
+          "document_number": 3,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.1.pdf"
+        },
+        {
+          "document_number": 4,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.1.pdf"
+        },
+        {
+          "document_number": 5,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.2.pdf"
+        },
+        {
+          "document_number": 6,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.2.pdf"
+        },
+        {
+          "document_number": 7,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.3.pdf"
+        },
+        {
+          "document_number": 8,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.3.pdf"
+        },
+        {
+          "document_number": 9,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.4.pdf"
+        },
+        {
+          "document_number": 10,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.4.pdf"
+        },
+        {
+          "document_number": 11,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.5.pdf"
+        },
+        {
+          "document_number": 12,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.5.pdf"
+        },
+        {
+          "document_number": 13,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.6.pdf"
+        },
+        {
+          "document_number": 14,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.6.pdf"
+        },
+        {
+          "document_number": 15,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.7.pdf"
+        },
+        {
+          "document_number": 16,
+          "filepath_local": "",
+          "filepath_ia": "",
+          "is_available": true,
+          "description": "PDF",
+          "url": "https://archive.org/download/gov.uscourts.cacd.882073/gov.uscourts.cacd.882073.168.7.pdf"
+        }
+      ]
+    }
+  ],
+  "pretrial_timeline": [
+    {
+      "phase": "Other Pretrial Activity",
+      "start_date": null,
+      "entry_count": 136,
+      "highlights": [
+        {
+          "entry_number": 1,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/1/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 7,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/7/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 8,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/8/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 9,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/9/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 10,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/10/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 12,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/12/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 15,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/15/clinton-brown-v-steve-smead/"
+        },
+        {
+          "entry_number": 16,
+          "date_filed": null,
+          "description": "Main Doc­ument",
+          "url": "https://www.courtlistener.comhttps://www.courtlistener.com/docket/67232938/16/clinton-brown-v-steve-smead/"
+        }
+      ]
+    }
+  ]
+}
