@@ -69,24 +69,6 @@ Alternative start method:
 To pull fresh opinions, run the refresh pipeline (`atlas_daily_refresh.ps1`) or use the
 "Update All Courts" button in the interface.
 
-## Windows Installer (Setup EXE)
-If you want this as a full Windows program, build and distribute the installer.
-
-1. Install Inno Setup 6 on your build machine.
-2. (Recommended) Prepare bundled private runtime:
-   - `powershell -ExecutionPolicy Bypass -File .\installer\prepare_embedded_runtime.ps1`
-3. Open `installer/AtlasLawViewer.iss` in Inno Setup Compiler.
-4. Build the installer (`Build` -> `Compile`).
-5. Find output in `dist_installer/AtlasLawViewerSetup.exe`.
-
-What the installer does:
-- Installs Atlas Law Viewer into `Program Files`.
-- Creates Start Menu shortcuts (Launch, Update All Courts).
-- Includes bundled runtime from `runtime/python` if present (no preinstalled Python required on target PCs).
-- Optionally runs `atlas_bootstrap.ps1` as a fallback bootstrap step.
-
-Note: If you skip bundled runtime prep, target machine needs Python 3.10+ for bootstrap.
-
 ## Repo Layout
 - `atlas_law_server.py` — local server with an allowlist and API endpoints (PDF serving, citation resolver, refresh control)
 - `atlas_law_v1.py` — Ninth Circuit ingestion; also triggers the Ninth viewer build
@@ -98,10 +80,13 @@ Note: If you skip bundled runtime prep, target machine needs Python 3.10+ for bo
 - `opinions_*.html`, `*_opinions_*.json` — generated search pages and datasets
 
 ## Notes for Reviewers
-- The repository excludes the PDF corpus by default so it clones quickly. Empty placeholder
-  directories (`ninth_pdfs/`, `central_pdfs/`, `case_extractor/documents/`) are kept so the
-  app runs without errors.
-- The full local dataset can be regenerated with the refresh script.
+- The repository includes generated HTML and JSON snapshots so the search interface works
+  immediately after cloning.
+- The much larger PDF corpus and local SQLite database are excluded. Empty placeholder
+  directories (`ninth_pdfs/`, `central_pdfs/`, `case_extractor/documents/`) keep the expected
+  local cache structure in place.
+- All generated snapshots and local caches can be refreshed from their public sources with
+  the refresh script.
 - Secrets and the local database are excluded via `.gitignore` and are not part of this repo.
 
 ## Data Sources and Attribution

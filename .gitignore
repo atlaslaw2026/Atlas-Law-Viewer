@@ -37,10 +37,7 @@ Thumbs.db
 # Optional: generated single-opinion pages
 opinion_viewer_*.html
 
-# Packaging artifacts (keep out of source repo)
+# Local packaging archives (keep out of source repo)
 Atlas_GitHub_Portfolio_full_v*.zip
 Atlas_GitHub_Portfolio_deploy*.zip
 Atlas_GitHub_Portfolio_folder_exact*.zip
-installer/build/
-installer/dist/
-dist_installer/

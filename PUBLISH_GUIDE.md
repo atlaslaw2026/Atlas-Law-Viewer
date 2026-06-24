@@ -12,8 +12,8 @@ pytest
 
 ## 2) Review what will be published
 
-The local database, PDF corpus, virtual environments, bundled runtime, logs, installer
-builds, secrets, and Windows shortcuts are excluded by `.gitignore`.
+The local database, PDF corpus, virtual environments, bundled runtime, logs, packaging
+archives, secrets, and Windows shortcuts are excluded by `.gitignore`.
 
 ```powershell
 git status --short
