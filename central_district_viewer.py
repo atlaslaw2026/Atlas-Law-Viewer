@@ -29,10 +29,19 @@ CACHE_FILE = os.path.join(BASE_DIR, "central_case_cache.json")
 DB_PATH = os.path.join(BASE_DIR, "atlas_law.db")
 PDF_DIR = os.path.join(BASE_DIR, "central_pdfs")
 LIST_SOURCE_URL = "https://law.justia.com/cases/federal/district-courts/california/cacdce/2026/"
+LISTING_SEED_FILE = os.path.join(BASE_DIR, "central_listing_seed.tsv")
 LISTING_RAW_FALLBACK_FILE = os.path.join(BASE_DIR, "central_live_listing_raw.txt")
+CHROME_DETAIL_FILE = os.path.join(BASE_DIR, "central_case_details_from_chrome.json")
 MAX_FETCH_PER_RUN = int(os.getenv("CENTRAL_FETCH_LIMIT", "300"))
 MAX_PDF_DOWNLOAD_PER_RUN = int(os.getenv("CENTRAL_PDF_LIMIT", "300"))
 SKIP_LOCAL_PDF_READ = os.getenv("CENTRAL_SKIP_PDF_READ", "0").strip() in {
+    "1",
+    "true",
+    "TRUE",
+    "yes",
+    "YES",
+}
+STRICT_REFRESH = os.getenv("CENTRAL_REFRESH_STRICT", "0").strip() in {
     "1",
     "true",
     "TRUE",
@@ -85,28 +94,7 @@ def is_cloudflare_challenge(text: str | None) -> bool:
     return "just a moment" in source and "challenges.cloudflare.com" in source
 
 
-def load_listing_from_browser_dump(file_path: str = LISTING_RAW_FALLBACK_FILE) -> list[dict]:
-    if not os.path.exists(file_path):
-        return []
-
-    try:
-        raw = open(file_path, "r", encoding="utf-8", errors="ignore").read().strip()
-    except Exception:
-        return []
-
-    if not raw:
-        return []
-
-    if raw.startswith("Result:"):
-        raw = raw.split("Result:", 1)[1].strip()
-
-    if raw.startswith('"') and raw.endswith('"'):
-        raw = raw[1:-1]
-
-    decoded = (
-        raw.replace("\\r\\n", "\n").replace("\\n", "\n").replace("\\t", "\t").replace('\\"', '"')
-    )
-
+def parse_listing_lines(decoded: str) -> list[dict]:
     cases: list[dict] = []
     seen: set[tuple[str, str]] = set()
     for idx, line in enumerate(decoded.splitlines(), start=1):
@@ -134,6 +122,53 @@ def load_listing_from_browser_dump(file_path: str = LISTING_RAW_FALLBACK_FILE) -
         )
 
     return cases
+
+
+def load_listing_tsv(file_path: str) -> list[dict]:
+    if not os.path.exists(file_path):
+        return []
+
+    try:
+        raw = open(file_path, "r", encoding="utf-8", errors="ignore").read().strip()
+    except Exception:
+        return []
+
+    if not raw:
+        return []
+
+    if raw.startswith("Result:"):
+        raw = raw.split("Result:", 1)[1].strip()
+
+    if raw.startswith('"') and raw.endswith('"'):
+        raw = raw[1:-1]
+
+    decoded = (
+        raw.replace("\\r\\n", "\n").replace("\\n", "\n").replace("\\t", "\t").replace('\\"', '"')
+    )
+    return parse_listing_lines(decoded)
+
+
+def load_listing_seed(file_path: str = LISTING_SEED_FILE) -> list[dict]:
+    return load_listing_tsv(file_path)
+
+
+def load_listing_from_browser_dump(file_path: str = LISTING_RAW_FALLBACK_FILE) -> list[dict]:
+    return load_listing_tsv(file_path)
+
+
+def merge_case_lists(*case_lists: list[dict]) -> list[dict]:
+    merged: list[dict] = []
+    seen: set[str] = set()
+    for case_list in case_lists:
+        for case in case_list:
+            url = normalize_central_url(case.get("url"))
+            if not url or url in seen:
+                continue
+            seen.add(url)
+            merged.append(case)
+    for idx, case in enumerate(merged, start=1):
+        case["id"] = idx
+    return merged
 
 
 def mirror_case_url(url: str) -> str:
@@ -282,12 +317,14 @@ def collapse_duplicate_opinions(items: list[dict]) -> list[dict]:
         )
         return (date_quality, has_pdf, text_len, auth_count)
 
-    grouped: dict[tuple[str, str, str], dict] = {}
+    grouped: dict[tuple[str, ...], dict] = {}
     for op in items:
+        url = normalize_central_url(op.get("url"))
+        pdf_url = normalize_central_url(op.get("pdf_url"))
         title = normalize_ws(op.get("title") or "").lower()
         docket = normalize_ws(op.get("docket") or "").lower()
         date_key = normalize_ws(op.get("issue_date") or op.get("date") or "")
-        key = (title, docket, date_key)
+        key = ("url", url) if url else ("fallback", title, docket, date_key, pdf_url)
 
         existing = grouped.get(key)
         if existing is None:
@@ -841,6 +878,22 @@ def local_pdf_path_for_case(item: dict) -> str:
     return os.path.join(PDF_DIR, _safe_filename_from_case(item))
 
 
+def derive_justia_pdf_url(case_url: str | None) -> str:
+    value = normalize_ws(case_url)
+    if not value:
+        return ""
+    parsed = urllib.parse.urlparse(value)
+    host = (parsed.netloc or "").lower()
+    path = parsed.path or ""
+    if host != "law.justia.com":
+        return ""
+    if "/cases/federal/district-courts/california/cacdce/" not in path:
+        return ""
+    path = re.sub(r"/download/?$", "/", path, flags=re.IGNORECASE)
+    normalized_path = path if path.endswith("/") else f"{path}/"
+    return f"https://cases.justia.com{normalized_path}0.pdf"
+
+
 def sync_local_pdf_paths(cases: list[dict]) -> None:
     for item in cases:
         expected_local_pdf = local_pdf_path_for_case(item)
@@ -852,8 +905,10 @@ def download_central_pdf(pdf_url: str, file_path: str, timeout: int = 30) -> boo
         return False
     try:
         req = urllib.request.Request(pdf_url, headers={"User-Agent": "Mozilla/5.0"})
-        data = urllib.request.urlopen(req, timeout=timeout).read()
-        if not data:
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            content_type = (response.headers.get("Content-Type") or "").lower()
+            data = response.read()
+        if not data or (not data.startswith(b"%PDF") and "pdf" not in content_type):
             return False
         with open(file_path, "wb") as f:
             f.write(data)
@@ -890,6 +945,9 @@ def persist_to_database(cases: list[dict]) -> tuple[int, int]:
 
             if not os.path.exists(local_path_abs):
                 local_pdf_path = ""
+                item["pdf_url"] = ""
+            else:
+                item["pdf_url"] = pdf_url
 
         citations_json = json.dumps(item.get("citations") or {}, ensure_ascii=False)
         subjects_text = ";".join(item.get("subjects") or ["central-district"])
@@ -943,6 +1001,34 @@ def load_cache() -> dict:
         return data if isinstance(data, dict) else {}
     except Exception:
         return {}
+
+
+def load_chrome_case_details(file_path: str = CHROME_DETAIL_FILE) -> dict:
+    if not os.path.exists(file_path):
+        return {}
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            rows = json.load(f)
+    except Exception:
+        return {}
+    if not isinstance(rows, list):
+        return {}
+
+    details = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        url = normalize_central_url(row.get("url"))
+        if not url:
+            continue
+        body = clean_main_text(row.get("body") or "")
+        details[url] = {
+            "text": "" if is_noisy_page_text(body) else body[:80000],
+            "pdf_url": normalize_central_url(row.get("pdf")),
+            "citations": extract_citations(body) if body else {"cases": [], "statutes": [], "rules": [], "regulations": []},
+            "title": normalize_text(row.get("title") or ""),
+        }
+    return details
 
 
 def save_cache(cache: dict) -> None:
@@ -1055,12 +1141,44 @@ def export_data() -> int:
         cases = []
 
     if not cases:
+        seed_cases = load_listing_seed()
+        dump_cases = load_listing_from_browser_dump()
+        if seed_cases:
+            cases = merge_case_lists(seed_cases, dump_cases)
+            source_used = "listing-seed+browser-dump" if dump_cases else "listing-seed"
+
+    if STRICT_REFRESH and not cases:
+        raise RuntimeError(
+            "Could not fetch a live Central District listing from Justia during strict refresh"
+        )
+
+    if not cases:
         dump_cases = load_listing_from_browser_dump()
         if dump_cases:
             cases = dump_cases
             source_used = "browser-dump"
 
     cache = load_cache()
+    cache_changed = False
+    chrome_details = load_chrome_case_details()
+    if chrome_details:
+        for url, chrome_detail in chrome_details.items():
+            existing = cache.get(url) if isinstance(cache.get(url), dict) else {}
+            if (
+                chrome_detail.get("pdf_url")
+                and chrome_detail.get("pdf_url") != existing.get("pdf_url")
+            ) or (chrome_detail.get("text") and not existing.get("text")):
+                merged_detail = dict(existing)
+                if chrome_detail.get("text") and not merged_detail.get("text"):
+                    merged_detail["text"] = chrome_detail.get("text")
+                if chrome_detail.get("pdf_url"):
+                    merged_detail["pdf_url"] = chrome_detail.get("pdf_url")
+                if chrome_detail.get("citations") and not merged_detail.get("citations"):
+                    merged_detail["citations"] = chrome_detail.get("citations")
+                if chrome_detail.get("title") and not merged_detail.get("title"):
+                    merged_detail["title"] = chrome_detail.get("title")
+                cache[url] = merged_detail
+                cache_changed = True
     if not cases and cache:
         cases = build_cases_from_cache(cache)
         if cases:
@@ -1097,6 +1215,7 @@ def export_data() -> int:
             not isinstance(detail, dict) or not detail.get("text") or not detail.get("pdf_url")
         )
         if needs_refresh:
+            should_fetch_detail = False
             if attempted >= MAX_FETCH_PER_RUN:
                 detail = {
                     "text": "",
@@ -1105,8 +1224,9 @@ def export_data() -> int:
                 }
             else:
                 attempted += 1
+                should_fetch_detail = True
             try:
-                if attempted <= MAX_FETCH_PER_RUN:
+                if should_fetch_detail:
                     detail = fetch_case_details(key)
                     if (
                         (not (detail or {}).get("text"))
@@ -1214,7 +1334,8 @@ def export_data() -> int:
             item["date"] = exact_issue_date
         existing_pdf_url = normalize_ws(item.get("pdf_url") or "")
         fetched_pdf_url = normalize_ws(detail.get("pdf_url") or "")
-        item["pdf_url"] = fetched_pdf_url or existing_pdf_url
+        derived_pdf_url = derive_justia_pdf_url(item.get("url"))
+        item["pdf_url"] = fetched_pdf_url or existing_pdf_url or derived_pdf_url
 
         existing_local_pdf = normalize_ws(item.get("local_pdf_path") or "")
         if os.path.exists(expected_local_pdf):
@@ -1245,12 +1366,19 @@ def export_data() -> int:
         reverse=True,
     )
 
-    if updated:
+    if updated or cache_changed:
         save_cache(cache)
 
     upserts, downloaded = persist_to_database(cases)
 
     sync_local_pdf_paths(cases)
+    cases = [
+        item
+        for item in cases
+        if item.get("local_pdf_path") and os.path.exists(item.get("local_pdf_path") or "")
+    ]
+    for idx, item in enumerate(cases, start=1):
+        item["id"] = idx
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(cases, f, ensure_ascii=False, indent=2)
@@ -1565,8 +1693,12 @@ def create_html(count: int) -> None:
                     btn.textContent = 'Updating…';
                 } else {
                     const added = Number(data?.refresh_summary?.total_added || 0);
+                    const warnings = Array.isArray(data?.refresh_summary?.warnings)
+                        ? data.refresh_summary.warnings
+                        : [];
+                    const warningText = warnings.length ? ' (CACD unavailable)' : '';
                     if (data.exit_code === 0) {
-                        el.textContent = `Last update: +${added} cases`;
+                        el.textContent = `Last update: +${added} cases${warningText}`;
                     } else if (data.exit_code !== null && data.exit_code !== undefined) {
                         el.textContent = 'Last update failed';
                     } else {
@@ -1786,13 +1918,11 @@ def create_html(count: int) -> None:
             const preferredPdf = op.local_pdf_path
                 ? `/api/local_pdf?path=${encodeURIComponent(op.local_pdf_path)}`
                 : '';
-            const remotePdf = proxiedPdfUrl(op.pdf_url || '');
-            const derivedPdf = proxiedPdfUrl(deriveJustiaPdfFromOpinionUrl(safeUrl));
-            const alternatePdf = remotePdf || derivedPdf;
+            const alternatePdf = proxiedPdfUrl(op.pdf_url || '');
             const pdfToEmbed = preferredPdf || alternatePdf;
             const embeddedHtml = pdfToEmbed
                 ? buildPdfEmbed(pdfToEmbed, 'Central District PDF')
-                : '<div class="preview-text" style="margin-top:12px;">No PDF or source page URL available for this opinion yet.</div>';
+                : '<div class="preview-text" style="margin-top:12px;">No direct PDF is available for this source record yet. Use the source opinion page link above.</div>';
 
             return `
                 <div class="right-title">${escapeHtml(op.title || 'Untitled')}</div>
@@ -1920,7 +2050,7 @@ def create_html(count: int) -> None:
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html)
 
-    print(f"✓ Created: {HTML_FILE}")
+    print(f"[OK] Created: {HTML_FILE}")
 
 
 if __name__ == "__main__":
@@ -1928,7 +2058,7 @@ if __name__ == "__main__":
     total = export_data()
     create_html(total)
     if os.getenv("ATLAS_NO_BROWSER", "0") == "1":
-        print("\n✓ Complete! Browser launch skipped (ATLAS_NO_BROWSER=1)")
+        print("\n[OK] Complete! Browser launch skipped (ATLAS_NO_BROWSER=1)")
     else:
-        print("\n✓ Complete! Opening http://127.0.0.1:8080/central_opinions_index.html")
+        print("\n[OK] Complete! Opening http://127.0.0.1:8080/central_opinions_index.html")
         webbrowser.open("http://127.0.0.1:8080/central_opinions_index.html")

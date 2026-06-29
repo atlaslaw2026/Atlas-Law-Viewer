@@ -21,11 +21,16 @@ import os
 import re
 import smtplib
 import sqlite3
+import sys
 from email.message import EmailMessage
 from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
+BASE_DIR = os.path.dirname(__file__)
+if BASE_DIR and BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 
 try:
     import fitz  # PyMuPDF
@@ -39,7 +44,7 @@ except Exception:
     pass
 
 # Configuration (can be set in .env)
-DB_PATH = os.getenv("DB_PATH", os.path.join(os.path.dirname(__file__), "atlas_law.db"))
+DB_PATH = os.getenv("DB_PATH", os.path.join(BASE_DIR, "atlas_law.db"))
 SMTP_HOST = os.getenv("SMTP_HOST", "")
 SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
 SMTP_USER = os.getenv("SMTP_USER", "")
@@ -47,7 +52,7 @@ SMTP_PASS = os.getenv("SMTP_PASS", "")
 EMAIL_FROM = os.getenv("EMAIL_FROM", SMTP_USER)
 EMAIL_TO = os.getenv("EMAIL_TO", "")
 USER_AGENT = os.getenv("USER_AGENT", "AtlasLawBot/1.0 (+https://local)")
-PDF_DIR = os.getenv("NINTH_PDF_DIR", os.path.join(os.path.dirname(__file__), "ninth_pdfs"))
+PDF_DIR = os.getenv("NINTH_PDF_DIR", os.path.join(BASE_DIR, "ninth_pdfs"))
 MAX_NINTH_PDF_DOWNLOAD_PER_RUN = int(os.getenv("NINTH_PDF_LIMIT", "2500"))
 
 BASE = "https://www.ca9.uscourts.gov"
