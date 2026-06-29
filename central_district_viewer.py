@@ -1025,7 +1025,11 @@ def load_chrome_case_details(file_path: str = CHROME_DETAIL_FILE) -> dict:
         details[url] = {
             "text": "" if is_noisy_page_text(body) else body[:80000],
             "pdf_url": normalize_central_url(row.get("pdf")),
-            "citations": extract_citations(body) if body else {"cases": [], "statutes": [], "rules": [], "regulations": []},
+            "citations": (
+                extract_citations(body)
+                if body
+                else {"cases": [], "statutes": [], "rules": [], "regulations": []}
+            ),
             "title": normalize_text(row.get("title") or ""),
         }
     return details
