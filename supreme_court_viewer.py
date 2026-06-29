@@ -593,8 +593,12 @@ def create_searchable_html(count: int):
                     btn.textContent = 'Updating…';
                 } else {
                     const added = Number(data?.refresh_summary?.total_added || 0);
+                    const warnings = Array.isArray(data?.refresh_summary?.warnings)
+                        ? data.refresh_summary.warnings
+                        : [];
+                    const warningText = warnings.length ? ' (CACD unavailable)' : '';
                     if (data.exit_code === 0) {
-                        el.textContent = `Last update: +${added} cases`;
+                        el.textContent = `Last update: +${added} cases${warningText}`;
                     } else if (data.exit_code !== null && data.exit_code !== undefined) {
                         el.textContent = 'Last update failed';
                     } else {
