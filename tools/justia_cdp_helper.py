@@ -7,7 +7,6 @@ import urllib.request
 
 import websockets
 
-
 DEBUG_URL = os.getenv("JUSTIA_CDP_DEBUG_URL", "http://127.0.0.1:9222/json")
 
 
@@ -42,7 +41,9 @@ def load_targets():
         return json.load(response)
 
 
-def pick_page(targets, url_contains="law.justia.com/cases/federal/district-courts/california/cacdce/2026"):
+def pick_page(
+    targets, url_contains="law.justia.com/cases/federal/district-courts/california/cacdce/2026"
+):
     pages = [t for t in targets if t.get("type") == "page" and t.get("webSocketDebuggerUrl")]
     for page in pages:
         if url_contains in page.get("url", ""):
@@ -112,7 +113,10 @@ async def scrape_cacd_listing(output_path):
             {"expression": expression, "returnByValue": True, "awaitPromise": True},
         )
         if "exceptionDetails" in result:
-            print(json.dumps(result["exceptionDetails"], ensure_ascii=False, indent=2), file=sys.stderr)
+            print(
+                json.dumps(result["exceptionDetails"], ensure_ascii=False, indent=2),
+                file=sys.stderr,
+            )
         rows = result.get("result", {}).get("value") or []
     with open(output_path, "w", encoding="utf-8", newline="") as f:
         for row in rows:
@@ -196,7 +200,11 @@ def main():
     elif args.command == "scrape-listing":
         asyncio.run(scrape_cacd_listing(args.output or "central_listing_seed.tsv"))
     else:
-        asyncio.run(scrape_pdf_links(args.input, args.output or "central_case_details_from_chrome.json", args.limit))
+        asyncio.run(
+            scrape_pdf_links(
+                args.input, args.output or "central_case_details_from_chrome.json", args.limit
+            )
+        )
 
 
 if __name__ == "__main__":
